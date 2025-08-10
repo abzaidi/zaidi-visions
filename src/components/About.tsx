@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { User } from "lucide-react";
+import profileImg from "@/assets/profile.jpg";
 
 export const About = () => {
   return (
@@ -18,9 +19,16 @@ export const About = () => {
           {/* Profile Image/Avatar */}
           <div className="lg:col-span-1 flex justify-center">
             <div className="relative">
-              <div className="w-80 h-80 glass-card rounded-2xl flex items-center justify-center glow-effect">
-                <User className="w-32 h-32 text-primary" />
+              {/* Image container without glass or tint */}
+              <div className="w-80 h-80 rounded-2xl overflow-hidden relative z-10">
+                <img 
+                  src={profileImg} 
+                  alt="Profile" 
+                  className="w-full h-full object-cover"
+                />
               </div>
+
+              {/* Glow effect stays behind the image */}
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-30 blur"></div>
             </div>
           </div>
@@ -43,16 +51,16 @@ export const About = () => {
                 
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="text-center p-4 glass-card rounded-lg">
-                    <div className="text-2xl font-bold text-primary mb-2">5+</div>
-                    <div className="text-sm text-muted-foreground">Years Experience</div>
-                  </div>
-                  <div className="text-center p-4 glass-card rounded-lg">
-                    <div className="text-2xl font-bold text-primary mb-2">20+</div>
+                    <div className="text-2xl font-bold text-primary mb-2">15+</div>
                     <div className="text-sm text-muted-foreground">Projects Completed</div>
                   </div>
                   <div className="text-center p-4 glass-card rounded-lg">
                     <div className="text-2xl font-bold text-primary mb-2">10+</div>
                     <div className="text-sm text-muted-foreground">Technologies Mastered</div>
+                  </div>
+                  <div className="text-center p-4 glass-card rounded-lg">
+                    <div className="text-2xl font-bold text-primary mb-2">5+</div>
+                    <div className="text-sm text-muted-foreground">Achievements</div>
                   </div>
                 </div>
               </CardContent>

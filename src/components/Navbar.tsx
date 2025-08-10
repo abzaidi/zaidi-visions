@@ -61,9 +61,9 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <span className="text-xl font-bold gradient-text">AZ</span>
-          </div>
+          {/* <div className="flex-shrink-0">
+            <span className="text-xl font-bold gradient-text">Abubakar Zaidi</span>
+          </div> */}
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -86,14 +86,20 @@ export const Navbar = () => {
 
           {/* Resume Button */}
           <div className="hidden md:block">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="bg-primary/10 border-primary/20 hover:bg-primary/20 text-primary"
+            <a 
+              href="https://drive.google.com/file/d/1KWwU-qBEiABephd69buYcUaTCOECdsqf/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              <Download className="w-4 h-4 mr-2" />
-              Resume
-            </Button>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="bg-primary/10 border-primary/20 hover:bg-primary/20 text-primary hover:text-cyan"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Resume
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}

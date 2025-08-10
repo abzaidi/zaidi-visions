@@ -1,69 +1,51 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Code, 
-  Database, 
-  Globe, 
-  Server, 
-  Bot, 
-  Cloud, 
-  GitBranch, 
-  Container,
-  Zap,
-  Brain,
-  Settings,
-  Terminal
-} from "lucide-react";
+import { Code } from "lucide-react";
+import {
+  SiPython,
+  SiDjango,
+  SiFlask,
+  SiFastapi,
+  SiJavascript,
+  SiSelenium,
+  SiDigitalocean,
+  SiVercel,
+  SiGithubactions,
+  SiDocker,
+  SiPostgresql,
+  SiSupabase,
+  SiGit,
+  SiGithub,
+  SiLinux
+} from "react-icons/si";
 
-const skillCategories = [
-  {
-    title: "Languages & Frameworks",
-    icon: Code,
-    skills: [
-      { name: "Python", icon: "🐍" },
-      { name: "Django", icon: "🎯" },
-      { name: "Flask", icon: "🌶️" },
-      { name: "FastAPI", icon: "⚡" },
-      { name: "JavaScript", icon: "🟨" },
-      { name: "TypeScript", icon: "🔷" },
-    ]
-  },
-  {
-    title: "AI & Automation",
-    icon: Brain,
-    skills: [
-      { name: "LLMs & RAG", icon: "🧠" },
-      { name: "Selenium", icon: "🤖" },
-      { name: "Playwright", icon: "🎭" },
-      { name: "Prompt Engineering", icon: "💭" },
-      { name: "Machine Learning", icon: "📊" },
-      { name: "Data Analysis", icon: "📈" },
-    ]
-  },
-  {
-    title: "Cloud & DevOps",
-    icon: Cloud,
-    skills: [
-      { name: "DigitalOcean", icon: "🌊" },
-      { name: "Vercel", icon: "▲" },
-      { name: "GitHub Actions", icon: "⚙️" },
-      { name: "Docker", icon: "🐳" },
-      { name: "CI/CD", icon: "🔄" },
-      { name: "AWS", icon: "☁️" },
-    ]
-  },
-  {
-    title: "Databases & Tools",
-    icon: Database,
-    skills: [
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "MongoDB", icon: "🍃" },
-      { name: "Redis", icon: "🔴" },
-      { name: "Git", icon: "📝" },
-      { name: "Linux", icon: "🐧" },
-      { name: "API Design", icon: "🔗" },
-    ]
-  }
+import { FaLink, FaBrain } from "react-icons/fa";
+import { TbMessageChatbot } from "react-icons/tb"; // for Prompt Engineering
+import { BiInfinite } from "react-icons/bi"; // for CI/CD
+import playwrightLogo from "@/assets/Playwright--Streamline-Svg-Logos.svg";
+
+
+export const allSkills = [
+  { name: "Python", icon: <SiPython className="text-yellow-400 w-6 h-6" /> },
+  { name: "Django", icon: <SiDjango className="text-green-600 w-6 h-6" /> },
+  { name: "Flask", icon: <SiFlask className="text-gray-300 w-6 h-6" /> },
+  { name: "FastAPI", icon: <SiFastapi className="text-teal-400 w-6 h-6" /> },
+  { name: "RESTful APIs", icon: <FaLink className="text-blue-400 w-6 h-6" /> },
+  { name: "JavaScript", icon: <SiJavascript className="text-yellow-300 w-6 h-6" /> },
+  { name: "LLMs & RAG", icon: <FaBrain className="text-purple-400 w-6 h-6" /> },
+  { name: "Selenium", icon: <SiSelenium className="text-green-500 w-6 h-6" /> },
+  { name: "Playwright", icon: <img src={playwrightLogo} className="w-6 h-6" alt="Playwright" /> },
+  { name: "Prompt Engineering", icon: <TbMessageChatbot className="text-pink-400 w-6 h-6" /> },
+  { name: "DigitalOcean", icon: <SiDigitalocean className="text-blue-400 w-6 h-6" /> },
+  { name: "Vercel", icon: <SiVercel className="text-white w-6 h-6" /> },
+  { name: "GitHub Actions", icon: <SiGithubactions className="text-gray-300 w-6 h-6" /> },
+  { name: "Docker", icon: <SiDocker className="text-blue-500 w-6 h-6" /> },
+  { name: "CI/CD", icon: <BiInfinite className="text-orange-400 w-6 h-6" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600 w-6 h-6" /> },
+  { name: "Supabase", icon: <SiSupabase className="text-green-500 w-6 h-6" /> },
+  { name: "Git", icon: <SiGit className="text-orange-500 w-6 h-6" /> },
+  { name: "GitHub", icon: <SiGithub className="text-white w-6 h-6" /> },
+  { name: "Linux", icon: <SiLinux className="text-yellow-500 w-6 h-6" /> },
 ];
 
 export const Skills = () => {
@@ -79,40 +61,32 @@ export const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map((category, index) => (
-            <Card 
-              key={category.title} 
-              className="glass-card border-primary/20 card-hover"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="p-3 bg-primary/20 rounded-lg mr-4">
-                    <category.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
+        <Card className="glass-card border-primary/20 card-hover">
+          <CardContent className="p-8">
+            <div className="flex items-center mb-6">
+              <div className="p-3 bg-primary/20 rounded-lg mr-4">
+                <Code className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">Skills & Technologies</h3>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {allSkills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex items-center p-3 glass-card rounded-lg hover:bg-primary/10 transition-all duration-300 cursor-pointer group"
+                >
+                  <span className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-300">
+                    {skill.icon}
+                  </span>
+                  <span className="text-sm font-medium text-foreground/90 group-hover:text-primary transition-colors duration-300">
+                    {skill.name}
+                  </span>
                 </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  {category.skills.map((skill) => (
-                    <div 
-                      key={skill.name}
-                      className="flex items-center p-3 glass-card rounded-lg hover:bg-primary/10 transition-all duration-300 cursor-pointer group"
-                    >
-                      <span className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-300">
-                        {skill.icon}
-                      </span>
-                      <span className="text-sm font-medium text-foreground/90 group-hover:text-primary transition-colors duration-300">
-                        {skill.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
 
         <div className="mt-12 text-center">
           <Badge variant="outline" className="px-6 py-2 text-lg border-primary/30 text-primary">

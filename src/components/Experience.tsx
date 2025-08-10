@@ -4,52 +4,20 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experienceData = [
   {
-    title: "Senior Software Engineer",
-    company: "TechCorp Solutions",
-    location: "San Francisco, CA",
-    duration: "2023 - Present",
-    type: "Full-time",
-    description: "Leading development of AI-powered automation tools and scalable web applications using Python and modern frameworks.",
-    achievements: [
-      "Architected and deployed 5+ production applications using Django and FastAPI",
-      "Implemented RAG pipelines that improved search accuracy by 40%",
-      "Built automated testing frameworks using Selenium and Playwright",
-      "Mentored junior developers and led code review processes",
-      "Optimized application performance, reducing load times by 60%"
-    ],
-    technologies: ["Python", "Django", "FastAPI", "React", "PostgreSQL", "Docker", "AWS"]
-  },
-  {
-    title: "Full Stack Developer",
-    company: "Digital Innovations Ltd",
-    location: "Austin, TX",
-    duration: "2022 - 2023",
-    type: "Full-time",
-    description: "Developed and maintained web applications with focus on user experience and performance optimization.",
-    achievements: [
-      "Built responsive web applications serving 10,000+ users",
-      "Integrated third-party APIs and payment gateways",
-      "Implemented CI/CD pipelines using GitHub Actions",
-      "Collaborated with design team to improve UI/UX",
-      "Reduced deployment time by 50% through automation"
-    ],
-    technologies: ["JavaScript", "React", "Node.js", "MongoDB", "Express", "Git"]
-  },
-  {
-    title: "Python Developer Intern",
-    company: "StartupHub",
-    location: "Remote",
-    duration: "2021 - 2022",
+    title: "Software Engineer Intern",
+    company: "Codesy Consulting",
+    location: "Onsite - Karachi, Pakistan",
+    duration: "Jan 2025 - May 2025",
     type: "Internship",
     description: "Gained hands-on experience in web development and automation while contributing to real-world projects.",
     achievements: [
       "Developed data scraping tools using Selenium",
-      "Created REST APIs using Flask framework",
-      "Participated in agile development processes",
-      "Contributed to open-source projects",
+      "Created REST APIs using Flask and NestJS",
+      "Contributed to a desktop application using Electron.js",
+      "Configured GitHub Actions to automate CI/CD pipelines",
       "Completed training in cloud deployment"
     ],
-    technologies: ["Python", "Flask", "Selenium", "SQLite", "Git", "Linux"]
+    technologies: ["Python", "JavaScript", "Flask", "Selenium", "SQLite", "Git", "Linux"]
   }
 ];
 
@@ -67,22 +35,38 @@ export const Experience = () => {
         </div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent transform md:-translate-x-0.5"></div>
+          {/* Timeline line - show only if more than 1 experience */}
+          {experienceData.length > 1 && (
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent transform md:-translate-x-0.5"></div>
+          )}
 
           <div className="space-y-12">
             {experienceData.map((exp, index) => (
               <div 
                 key={index} 
                 className={`relative flex items-center ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  experienceData.length > 1
+                    ? index % 2 === 0
+                      ? 'md:flex-row'
+                      : 'md:flex-row-reverse'
+                    : 'justify-center'
                 }`}
               >
-                {/* Timeline dot */}
-                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-2 z-10 glow-effect"></div>
+                {/* Timeline dot - show only if more than 1 experience */}
+                {experienceData.length > 1 && (
+                  <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-2 z-10 glow-effect"></div>
+                )}
 
                 {/* Content card */}
-                <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
+                <div
+                  className={`w-full md:w-5/12 ${
+                    experienceData.length > 1
+                      ? index % 2 === 0
+                        ? 'ml-16 md:ml-0 md:mr-auto md:pr-8'
+                        : 'ml-16 md:ml-auto md:pl-8'
+                      : 'max-w-xl'
+                  }`}
+                >
                   <Card className="glass-card border-primary/20 card-hover">
                     <CardContent className="p-8">
                       <div className="flex items-start justify-between mb-4">

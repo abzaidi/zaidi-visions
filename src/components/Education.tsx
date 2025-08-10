@@ -4,27 +4,15 @@ import { GraduationCap, Calendar, Award } from "lucide-react";
 
 const educationData = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    university: "University of Technology",
-    duration: "2018 - 2022",
-    cgpa: "3.8/4.0",
+    degree: "Bachelor of Science in Software Engineering",
+    university: "Hamdard University Karachi",
+    duration: "2021 - 2025",
+    cgpa: "3.82/4.0",
     highlights: [
-      "Graduated Magna Cum Laude",
-      "Dean's List for 6 semesters",
-      "Computer Science Society President",
-      "Published research on AI applications"
-    ]
-  },
-  {
-    degree: "Full Stack Web Development Bootcamp",
-    university: "Tech Academy",
-    duration: "2022",
-    cgpa: "Certification",
-    highlights: [
-      "Intensive 6-month program",
-      "Top 5% of cohort",
-      "Built 15+ real-world projects",
-      "Mentored junior developers"
+      "Achieved top academic performance",
+      "Merit-based scholarship holder",
+      "Core CS coursework: OOP, DSA, Databases",
+      "Final year project on Educational Technology"
     ]
   }
 ];
@@ -43,22 +31,38 @@ export const Education = () => {
         </div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent transform md:-translate-x-0.5"></div>
+          {/* Timeline line - show only if more than 1 entry */}
+          {educationData.length > 1 && (
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent transform md:-translate-x-0.5"></div>
+          )}
 
           <div className="space-y-12">
             {educationData.map((edu, index) => (
               <div 
                 key={index} 
                 className={`relative flex items-center ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  educationData.length > 1
+                    ? index % 2 === 0
+                      ? 'md:flex-row'
+                      : 'md:flex-row-reverse'
+                    : 'justify-center' // Center if only one card
                 }`}
               >
-                {/* Timeline dot */}
-                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-2 z-10 glow-effect"></div>
+                {/* Timeline dot - show only if more than 1 entry */}
+                {educationData.length > 1 && (
+                  <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-2 z-10 glow-effect"></div>
+                )}
 
                 {/* Content card */}
-                <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
+                <div
+                  className={`w-full md:w-5/12 ${
+                    educationData.length > 1
+                      ? index % 2 === 0
+                        ? 'ml-16 md:ml-0 md:mr-auto md:pr-8'
+                        : 'ml-16 md:ml-auto md:pl-8'
+                      : 'max-w-xl' // nice width for single card
+                  }`}
+                >
                   <Card className="glass-card border-primary/20 card-hover">
                     <CardContent className="p-8">
                       <div className="flex items-start justify-between mb-4">
@@ -70,10 +74,10 @@ export const Education = () => {
                           {edu.duration}
                         </Badge>
                       </div>
-                      
+
                       <h3 className="text-xl font-bold text-foreground mb-2">{edu.degree}</h3>
                       <p className="text-lg text-primary mb-2">{edu.university}</p>
-                      
+
                       <div className="flex items-center mb-4">
                         <Award className="w-4 h-4 text-accent mr-2" />
                         <span className="text-accent font-semibold">{edu.cgpa}</span>

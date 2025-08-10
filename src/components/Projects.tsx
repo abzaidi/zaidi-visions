@@ -2,97 +2,132 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, Play, Zap } from "lucide-react";
+import odrioImg from "@/assets/odrio.png";
+import aiCyberImg from "@/assets/cyber.png";
+import studyMateImg from "@/assets/studymate.png";
+import testPrepImg from "@/assets/test.png";
+import studybudImg from "@/assets/studybud.png";
+import booklyImg from "@/assets/bookstore.png";
 
 const projects = [
   {
-    title: "AI-Powered Document Processor",
-    description: "An intelligent document processing system using RAG pipelines and LLMs to extract, analyze, and summarize complex documents with 95% accuracy.",
-    image: "🤖",
-    technologies: ["Python", "FastAPI", "LangChain", "PostgreSQL", "Docker"],
-    features: [
-      "RAG pipeline implementation",
-      "Multi-format document support",
-      "Real-time processing API",
-      "Custom prompt engineering"
+    title: "Odrio.io – AI-Powered Chatbot Platform for the Food Industry",
+    description:
+      "A multi-platform AI chatbot system for the food industry, enabling restaurant orders through text and voice across WhatsApp and a web application.",
+    image: odrioImg,
+    technologies: [
+      "React",
+      "Flask",
+      "PostgreSQL",
+      "LLaMA",
+      "Whisper",
+      "WebSockets",
+      "DigitalOcean",
+      "Nginx"
     ],
-    demoUrl: "#",
-    githubUrl: "#",
-    status: "Production"
-  },
-  {
-    title: "E-Commerce Automation Suite",
-    description: "Complete automation solution for e-commerce operations including inventory management, price monitoring, and order processing using Selenium and Playwright.",
-    image: "🛒",
-    technologies: ["Python", "Django", "Selenium", "Playwright", "Redis"],
     features: [
-      "Automated price monitoring",
-      "Inventory synchronization",
-      "Order processing pipeline",
-      "Real-time notifications"
+      "WhatsApp and web chatbot with text and voice ordering",
+      "Multi-language support for voice and text interactions",
+      "Restaurant and customer portals with menus, orders, and recommendations",
+      "Real-time order tracking via WebSockets",
+      "Optimized deployment with Nginx on DigitalOcean"
     ],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://odrio.io/",
+    githubUrl: "https://github.com/hassan1oct/flask-bot-backend",
     status: "Live"
   },
   {
-    title: "Cloud-Native API Gateway",
-    description: "Scalable API gateway built with FastAPI and deployed on DigitalOcean with automatic scaling, rate limiting, and comprehensive monitoring.",
-    image: "☁️",
-    technologies: ["FastAPI", "Docker", "DigitalOcean", "Redis", "PostgreSQL"],
+    title: "AI-Powered Cybersecurity Prototype for Next-Gen Endpoint Detection",
+    description:
+      "An AI-driven endpoint detection system for identifying unauthorized services from Windows event logs.",
+    image: aiCyberImg,
+    technologies: ["Python", "LLaMA", "Phi 3", "Streamlit", "SQLite", "Docker"],
     features: [
-      "Auto-scaling capabilities",
-      "Rate limiting & throttling",
-      "Real-time monitoring",
-      "JWT authentication"
+      "Model deployment to edge devices for local detection",
+      "Detection of unauthorized service installations from Windows Event ID logs",
+      "Synthetic data generation using LLaMA 3.1",
+      "Lightweight model optimization with Phi 3",
+      "Training on real and synthetic datasets for improved accuracy"
     ],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://github.com/qerberos-code/aiml_api",
+    githubUrl: "https://github.com/qerberos-code/aiml_api",
     status: "Beta"
   },
   {
-    title: "Machine Learning Pipeline",
-    description: "End-to-end ML pipeline for predictive analytics with automated model training, validation, and deployment using GitHub Actions CI/CD.",
-    image: "📊",
-    technologies: ["Python", "Scikit-learn", "Flask", "GitHub Actions", "AWS"],
-    features: [
-      "Automated model training",
-      "Performance monitoring",
-      "A/B testing framework",
-      "Continuous deployment"
+    title: "StudyMate – AI-Powered Advanced Quiz Creator",
+    description:
+      "A Django-based AI platform that digitizes handwritten notes, processes them via OCR, and generates topic-based quizzes and Q&A.",
+    image: studyMateImg,
+    technologies: [
+      "Django",
+      "PostgreSQL",
+      "Google Cloud Vision",
+      "Google Cloud Storage",
+      "LLaMA",
+      "JavaScript"
     ],
-    demoUrl: "#",
-    githubUrl: "#",
+    features: [
+      "Handwritten notes digitization using Google Cloud Vision OCR",
+      "Topic-based quiz and Q&A generation with LLaMA",
+      "User dashboard with statistics and authentication",
+      "Cloud-based storage and retrieval of notes and generated content",
+      "Integration with Together AI for content creation"
+    ],
+    demoUrl: "https://github.com/abzaidi/studyMate",
+    githubUrl: "https://github.com/abzaidi/studyMate",
     status: "Development"
   },
   {
-    title: "Real-Time Chat Application",
-    description: "Modern chat application with real-time messaging, file sharing, and video calls. Built with React and Django with WebSocket support.",
-    image: "💬",
-    technologies: ["React", "Django", "WebSockets", "PostgreSQL", "Vercel"],
+    title: "Personalized Test Prep Platform",
+    description:
+      "An adaptive learning platform that tailors tutoring, quizzes, and study resources for SAT, ACT, IELTS, and TOEFL using LLaMA-powered dynamic content.",
+    image: testPrepImg,
+    technologies: ["Python", "Streamlit", "SQLite", "LLaMA", "GitHub", "Heroku"],
     features: [
-      "Real-time messaging",
-      "File sharing capabilities",
-      "Video call integration",
-      "User presence indicators"
+      "Adaptive tutoring with personalized quizzes and study materials",
+      "Dynamic tutoring using LLaMA 3 API",
+      "Secure student data management with SQLite",
+      "Streamlit-based interactive learning interface",
+      "Support for multiple standardized tests (SAT, ACT, IELTS, TOEFL)"
     ],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://github.com/tzprograms/Llama3_Hackathon",
+    githubUrl: "https://github.com/tzprograms/Llama3_Hackathon",
+    status: "Production"
+  },
+  {
+    title: "Studybud - Collaborative Learning Platform",
+    description: "A Django-based social learning platform inspired by Discord.",
+    image: studybudImg,
+    technologies: ["Python", "Django", "SQLite", "Django REST Framework"],
+    features: [
+      "Create and manage study rooms for specific topics",
+      "Invite friends or allow public participation",
+      "Real-time messaging and discussion features",
+      "Topic tagging for easier room discovery",
+      "User authentication and profile management"
+    ],
+    demoUrl: "https://studybuddev.herokuapp.com/",
+    githubUrl: "https://github.com/abzaidi/studybud",
     status: "Live"
   },
   {
-    title: "DevOps Monitoring Dashboard",
-    description: "Comprehensive monitoring dashboard for DevOps teams with real-time metrics, alerts, and automated incident response.",
-    image: "📈",
-    technologies: ["React", "FastAPI", "InfluxDB", "Docker", "Kubernetes"],
+    title: "Bookly - E-Commerce Bookstore Website",
+    description:
+      "A fully functional e-commerce bookstore built with PHP, MySQL, and JavaScript.",
+    image: booklyImg,
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     features: [
-      "Real-time metrics visualization",
-      "Custom alert rules",
-      "Automated incident response",
-      "Performance analytics"
+      "User registration and login system",
+      "Browse and search for books by category",
+      "Add books to shopping cart and manage cart items",
+      "Checkout process with order confirmation",
+      "Responsive design for desktop and mobile"
     ],
-    demoUrl: "#",
-    githubUrl: "#",
-    status: "Production"
+    demoUrl:
+      "https://github.com/abzaidi/Online-Bookstore-Website",
+    githubUrl:
+      "https://github.com/abzaidi/Online-Bookstore-Website",
+    status: "Development"
   }
 ];
 
@@ -131,17 +166,19 @@ export const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="p-0">
-                <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                    {project.image}
-                  </span>
-                  <div className="absolute top-4 right-4">
-                    <Badge className={`${getStatusColor(project.status)} border`}>
-                      {project.status}
-                    </Badge>
-                  </div>
-                </div>
-              </CardHeader>
+  <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+    <img
+      src={project.image}
+      alt={project.title}
+      className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300"
+    />
+    <div className="absolute top-4 right-4">
+      <Badge className={`${getStatusColor(project.status)} border`}>
+        {project.status}
+      </Badge>
+    </div>
+  </div>
+</CardHeader>
               
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
@@ -180,7 +217,7 @@ export const Projects = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex-1 bg-primary/10 border-primary/30 hover:bg-primary/20 text-primary"
+                    className="flex-1 bg-primary/10 border-primary/30 hover:bg-primary/20 text-primary hover:text-cyan"
                     asChild
                   >
                     <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
@@ -192,7 +229,7 @@ export const Projects = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex-1 glass-card border-primary/30 hover:bg-primary/10"
+                    className="flex-1 glass-card border-primary/30 hover:bg-primary/10 hover:text-white"
                     asChild
                   >
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -210,10 +247,10 @@ export const Projects = () => {
           <Button 
             variant="outline" 
             size="lg"
-            className="glass-card border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+            className="glass-card border-primary/30 hover:bg-primary/10 hover:border-primary/50 hover:text-white"
             asChild
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/abzaidi" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 mr-2" />
               View All Projects on GitHub
             </a>

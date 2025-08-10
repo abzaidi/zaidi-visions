@@ -5,89 +5,109 @@ import { Trophy, Award, Star, ExternalLink, Calendar } from "lucide-react";
 
 const achievements = [
   {
-    title: "Meta Hacker Cup 2024 - Winner",
-    description: "Secured first place in Meta's global programming competition, competing against thousands of developers worldwide.",
-    icon: Trophy,
-    date: "2024",
-    category: "Competition",
-    certificateUrl: "#",
-    highlights: [
-      "Solved complex algorithmic problems",
-      "Ranked #1 globally",
-      "Advanced to final rounds",
-      "Recognition from Meta engineers"
-    ]
-  },
-  {
-    title: "AWS Certified Solutions Architect",
-    description: "Professional certification demonstrating expertise in designing and deploying scalable systems on AWS.",
-    icon: Award,
-    date: "2023",
-    category: "Certification",
-    certificateUrl: "#",
-    highlights: [
-      "Professional level certification",
-      "Cloud architecture expertise",
-      "Security best practices",
-      "Cost optimization strategies"
-    ]
-  },
-  {
-    title: "Open Source Contributor - 10K+ Stars",
-    description: "Contributed to major open-source projects with combined 10,000+ GitHub stars and active community engagement.",
-    icon: Star,
-    date: "2023",
-    category: "Open Source",
-    certificateUrl: "#",
-    highlights: [
-      "Multiple project contributions",
-      "Active community member",
-      "Code review participation",
-      "Documentation improvements"
-    ]
-  },
-  {
-    title: "Google Cloud Professional Developer",
-    description: "Certified in developing scalable applications and implementing CI/CD pipelines on Google Cloud Platform.",
-    icon: Award,
-    date: "2023",
-    category: "Certification",
-    certificateUrl: "#",
-    highlights: [
-      "Application development",
-      "DevOps practices",
-      "Monitoring and logging",
-      "Performance optimization"
-    ]
-  },
-  {
-    title: "Tech Innovation Award",
-    description: "Recognized for developing an AI-powered automation tool that improved business efficiency by 200%.",
-    icon: Trophy,
-    date: "2022",
-    category: "Innovation",
-    certificateUrl: "#",
-    highlights: [
-      "200% efficiency improvement",
-      "AI/ML implementation",
-      "Business impact recognition",
-      "Team leadership"
-    ]
-  },
-  {
-    title: "Kubernetes Certified Administrator",
-    description: "Demonstrated expertise in deploying, managing, and troubleshooting Kubernetes clusters in production environments.",
-    icon: Award,
-    date: "2022",
-    category: "Certification",
-    certificateUrl: "#",
-    highlights: [
-      "Container orchestration",
-      "Cluster management",
-      "Security configuration",
-      "Troubleshooting skills"
-    ]
-  }
+  title: "Harvard's CS50x Puzzle Day 2025 — Winner",
+  description: "Successfully solved all nine puzzles in Harvard's CS50x Puzzle Day, showcasing advanced problem-solving and logical reasoning skills.",
+  icon: Trophy,
+  date: "2025",
+  category: "Competition",
+  certificateUrl: "https://tinyurl.com/4zwewn8r",
+  highlights: [
+    "Perfect score in a competitive puzzle event",
+    "Tested on logic, math, and lateral thinking",
+    "Global participation with challenging problems"
+  ]
+},
+{
+  title: "LeetCode 500 Days Badge",
+  description: "Awarded for solving problems consistently for 500 consecutive days on LeetCode, demonstrating perseverance and algorithmic expertise.",
+  icon: Award,
+  date: "2025",
+  category: "Innovation",
+  certificateUrl: "https://leetcode.com/u/abzaidi11/",
+  highlights: [
+    "500 consecutive days of coding practice",
+    "Mastery in data structures and algorithms",
+    "Strong problem-solving discipline"
+  ]
+},
+{
+  title: "Meta Hacker Cup 2024 — Top 50 in Pakistan",
+  description: "Ranked among the top 50 competitors from Pakistan in the practice round of Meta's annual global competitive programming competition.",
+  icon: Trophy,
+  date: "2024",
+  category: "Competition",
+  certificateUrl: "https://tinyurl.com/4b7yr269",
+  highlights: [
+    "Competitive programming excellence",
+    "High rank in a global contest",
+    "Strong algorithmic and optimization skills"
+  ]
+},
+{
+  title: "Merit Scholarships — All Semesters",
+  description: "Awarded scholarships every semester for maintaining a high GPA throughout undergraduate studies.",
+  icon: Star,
+  date: "2021-2025",
+  category: "Innovation",
+  certificateUrl: "https://tinyurl.com/yz76aaxe",
+  highlights: [
+    "Consistent academic excellence",
+    "Strong GPA in Software Engineering",
+    "Recognition for sustained performance"
+  ]
+},
+{
+  title: "The Complete 2023 Web Development Bootcamp",
+  description: "Completed a comprehensive Udemy course covering full-stack web development with modern technologies and frameworks.",
+  icon: Star,
+  date: "2023",
+  category: "Certification",
+  certificateUrl: "https://tinyurl.com/26s88btr",
+  highlights: [
+    "HTML, CSS, JavaScript, Node.js, React",
+    "Full-stack application development",
+    "Hands-on project experience"
+  ]
+},
+{
+  title: "Edge Runners 3.2 Hackathon",
+  description: "Participated in the Edge Runners 3.2 Hackathon, collaborating to develop innovative solutions under time constraints.",
+  icon: Award,
+  date: "2024",
+  category: "Open Source",
+  certificateUrl: "https://tinyurl.com/28jnuayj",
+  highlights: [
+    "Team-based innovation",
+    "Problem-solving under pressure",
+    "Prototype development and pitching"
+  ]
+},
+{
+  title: "LLaMA 3 Hackathon",
+  description: "Contributed to a project leveraging Meta's LLaMA 3 model to create AI-driven solutions during a competitive hackathon.",
+  icon: Award,
+  date: "2024",
+  category: "Open Source",
+  certificateUrl: "https://tinyurl.com/353kzbt6",
+  highlights: [
+    "Hands-on experience with LLaMA 3",
+    "Applied large language models to real-world problems",
+    "Collaborative AI development"
+  ]
+},
+{
+  title: "Scientific Computing with Python",
+  description: "Completed freeCodeCamp's Scientific Computing with Python 2 certification, covering advanced Python programming concepts and practical applications.",
+  icon: Star,
+  date: "2024",
+  category: "Certification",
+  certificateUrl: "https://tinyurl.com/fn8r6fcb",
+  highlights: [
+    "Mastery of Python fundamentals and advanced features",
+    "Hands-on projects with data analysis and automation",
+    "Experience with algorithms and problem-solving in Python"
+  ]
+}
 ];
 
 const getCategoryColor = (category: string) => {
@@ -111,7 +131,7 @@ export const Achievements = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Achievements</span> & Recognition
+            <span className="gradient-text">Achievements</span> & Certificates
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Milestones and recognition that mark my journey in software engineering
@@ -163,12 +183,12 @@ export const Achievements = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full bg-primary/10 border-primary/30 hover:bg-primary/20 text-primary group-hover:scale-105 transition-transform duration-300"
+                  className="w-full bg-primary/10 border-primary/30 hover:bg-primary/20 text-primary group-hover:scale-105 transition-transform duration-300 hover:text-cyan"
                   asChild
                 >
                   <a href={achievement.certificateUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    View Certificate
+                    View Achievement
                   </a>
                 </Button>
               </CardContent>
@@ -187,10 +207,10 @@ export const Achievements = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="outline" className="border-primary/30 text-primary">
-                🎯 Next: Machine Learning Engineer Certification
+                🎯 Next: AWS & DevOps Engineer Certification
               </Badge>
               <Badge variant="outline" className="border-accent/30 text-accent">
-                📚 Learning: Advanced Kubernetes & DevOps
+                📚 Learning: Advanced Docker & DevOps
               </Badge>
             </div>
           </div>
