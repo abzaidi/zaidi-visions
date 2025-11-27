@@ -4,10 +4,10 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experienceData = [
   {
-    title: "Software Engineer Intern",
+    title: "Software Engineering Trainee",
     company: "Codesy Consulting",
     location: "Onsite - Karachi, Pakistan",
-    duration: "Jan 2025 - May 2025",
+    duration: "Jan 2025 - Sept 2025",
     type: "Internship",
     description: "Gained hands-on experience in web development and automation while contributing to real-world projects.",
     achievements: [
@@ -18,7 +18,39 @@ const experienceData = [
       "Completed training in cloud deployment"
     ],
     technologies: ["Python", "JavaScript", "Flask", "Selenium", "SQLite", "Git", "Linux"]
-  }
+  },
+  {
+    title: "Associate Software Engineer",
+    company: "Codesy Consulting",
+    location: "Onsite - Karachi, Pakistan",
+    duration: "Oct 2025 - Present",
+    type: "Full-time",
+    description: "Worked on NestJS and FastAPI-based backend applications, integrating AI and automation to enhance functionality and performance.",
+    achievements: [
+      "Developed end-to-end AI and RAG pipelines",
+      "Created REST APIs using NestJS",
+      "Integrated AI services using FastAPI",
+      "Implemented caching to optimize API response times and reduce load",
+      "Designed microservice architecture for scalable application development"
+    ],
+    technologies: ["Python", "JavaScript", "NestJS", "FastAPI", "Supabase", "Postgres", "Git"]
+  },
+  {
+    title: "Founding Engineer",
+    company: "Odrio.io",
+    location: "Remote",
+    duration: "May 2025 - Present",
+    type: "Part-time",
+    description: "Developed an AI-powered chatbot system enabling restaurant orders through text and voice across WhatsApp and a web application.",
+    achievements: [
+      "Developed a WhatsApp and web chatbot enabling text and voice ordering capabilities",
+      "Implemented text and voice ordering with multi-language support",
+      "Created restaurant and customer portals for menus, orders, and recommendations with PostgreSQL",
+      "Integrated real-time order tracking via WebSockets",
+      "Optimized deployment with Nginx on DigitalOcean for enhanced performance"
+    ],
+    technologies: ["Python", "JavaScript", "Flask", "ReactJS", "Postgres", "AI Agents", "Twilio", "Sockets", "Git"]
+  },
 ];
 
 export const Experience = () => {

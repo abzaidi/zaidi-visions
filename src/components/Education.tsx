@@ -4,6 +4,17 @@ import { GraduationCap, Calendar, Award } from "lucide-react";
 
 const educationData = [
   {
+    degree: "HSC (Pre-Engineering)",
+    university: "Govt. Degree College",
+    duration: "2019 - 2021",
+    cgpa: "81% | A+",
+    highlights: [
+      "Achieved outstanding performance in Intermediate",
+      "Member of the college cricket team",
+      "Balanced academics and sports",
+    ]
+  },
+    {
     degree: "Bachelor of Science in Software Engineering",
     university: "Hamdard University Karachi",
     duration: "2021 - 2025",
